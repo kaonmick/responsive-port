@@ -15,7 +15,7 @@ html{ font-size: 62.5%; }
 
 body{
   color: $fontcolor;
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: $basefont;
   line-height: 1.6;
   letter-spacing: 0.1em;
@@ -29,6 +29,7 @@ body{
 
 //top--------------------------------------
 .cover{
+    background-image: url(./image/business-card-min.jpg);
     max-width: 100%;
     height: 250px;
     background-size: cover;
@@ -58,7 +59,7 @@ body{
         padding: 15px;
         margin: 20px auto;
         h2{
-            font-size: 1.4rem;
+            font-size: 2.8rem;
             padding-bottom: 5px;
             font-weight: bold;
         }
@@ -68,15 +69,15 @@ body{
 //footer--------------------------------------
 .end{
     width: 70%;
-    height: 60px;
+    height: auto;
     background-color: $subcolor;
     @extend .text-center;
     margin: 30px auto 20px auto;
-    padding-top: 10px;
+    padding: 10px 0;
     @include border-radius(4px);
     p{
         color: $basecolor;
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: bold;
     }
     .button{
@@ -111,4 +112,11 @@ body{
                 width: 33.33333%;
             }
         }
+    
+    //hover------------------------------
+        .button{
+            &:hover {
+              background-color: darken($keycolor, 10%);
+        }
+    }
 }
